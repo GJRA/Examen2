@@ -37,7 +37,7 @@ unsigned int generarError(unsigned int codigo){
     scanf("%u",&pos);
     // 1 2 3 4 5 6 7
     numN=pow(2,(pos-1));
-    codigo = codigo & (~numN);
+    codigo = codigo ^ numN;
     convertirBinario(codigo,"Codigo con Error");
     return corregir(codigo);
 }
